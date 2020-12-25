@@ -6,7 +6,7 @@ public class Task6 {
         int i = 1;
         while (i < 10) {
             int mult = i * k;
-            System.out.println(i + " x " + k + " = " +mult);
+            System.out.println(i + " x " + k + " = " + mult);
             i++;
         }
     }
