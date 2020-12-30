@@ -23,8 +23,23 @@ class Teacher {
     public void setSubject(String subject) { this.subject = subject; }
 
     void evaluate(String stud) {
-        Random grade = new Random();
-        System.out.println("Преподаватель " + this.name + " оценил студента с именем " + stud + " по предмету " + this.subject + " на оценку " + (grade.nextInt(4) + 2) + ".");
+        Random rand = new Random();
+        int grade = rand.nextInt(4) + 2;
+        String word;
+        switch (grade) {
+            case 2:
+                word = "неудовлетворительно";
+                break;
+            case 3:
+                word = "удовлетворительно";
+                break;
+            case 4:
+                word = "хорошо";
+                break;
+            default:
+                word = "отлично";
+        }
+        System.out.println("Преподаватель " + this.name + " оценил студента с именем " + stud + " по предмету " + this.subject + " на оценку " + word + ".");
     }
 }
 
