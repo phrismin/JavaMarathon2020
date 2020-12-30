@@ -11,8 +11,8 @@ public class Task3 {
 }
 
 class Teacher {
-    String name;
-    String subject;
+    private String name;
+    private String subject;
 
     public Teacher(String name, String subject) {
         this.name = name;
@@ -29,7 +29,7 @@ class Teacher {
 }
 
 class Student {
-    String name;
+    private String name;
 
     Student(String name) { this.name = name; }
 
