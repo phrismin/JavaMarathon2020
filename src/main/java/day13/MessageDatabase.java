@@ -14,7 +14,6 @@ public class MessageDatabase {
     }
 
     public static void showDialog(User u1, User u2) {
-        List<Message> newList = new LinkedList<>();
         for (Message message : messages) {
             if (message.getSender() == u1 && message.getReceiver() == u2
                     || message.getSender() == u2 && message.getReceiver() == u1) {
