@@ -16,14 +16,10 @@ public class MessageDatabase {
     public static void showDialog(User u1, User u2) {
         List<Message> newList = new LinkedList<>();
         for (Message message : messages) {
-            if (message.getSender().toString().equals(u1.getUsername()) && message.getReceiver().toString().equals(u2.getUsername())) {
-                newList.add(message);
-            } else if (message.getReceiver().toString().equals(u1.getUsername()) && message.getSender().toString().equals(u2.getUsername())) {
-                newList.add(message);
+            if (message.getSender() == u1 && message.getReceiver() == u2
+                    || message.getSender() == u2 && message.getReceiver() == u1) {
+                System.out.printf("%s: %s\n", message.getSender(), message.getText());
             }
-        }
-        for (Message message : newList) {
-            System.out.printf("%s: %s\n", message.getSender(), message.getText());
         }
     }
 }
