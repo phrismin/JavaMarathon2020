@@ -1,5 +1,6 @@
 package day13;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class User {
@@ -8,23 +9,15 @@ public class User {
 
     public User(String username) {
         this.username = username;
-        subscriptions = null;
+        subscriptions = new LinkedList<>();
     }
 
     public String getUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
     public List<User> getSubscriptions() {
         return subscriptions;
-    }
-
-    public void setSubscriptions(List<User> subscriptions) {
-        this.subscriptions = subscriptions;
     }
 
     public void subscribe(User user) {
@@ -45,6 +38,6 @@ public class User {
 
     @Override
     public String toString() {
-        return username.toString();
+        return username;
     }
 }

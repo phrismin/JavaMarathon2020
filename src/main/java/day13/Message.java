@@ -35,7 +35,7 @@ public class Message {
     public String toString() {
         return "FROM: '" + sender + "'\n" +
                 "TO: '" + receiver + "'\n" +
-                "ON: '" + text + "'\n" +
+                "ON: '" + date + "'\n" +
                 '\'' + text + '\'';
     }
 }
